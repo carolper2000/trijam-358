@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://3du5cst1qvgj"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_abc12"]
+
+[sub_resource type="Theme" id="Theme_2nh25"]
+
+[node name="AudioManager" type="Control" unique_id=999088071]
+layout_mode = 3
+anchor_right = 0.201
+anchor_bottom = 0.049000002
+offset_right = -231.552
+offset_bottom = -31.752
+
+[node name="MicInput" type="AudioStreamPlayer" parent="." unique_id=1634959458]
+stream = SubResource("AudioStreamMicrophone_abc12")
+autoplay = true
+
+[node name="InputDeviceOptionButton" type="OptionButton" parent="." unique_id=749241249]
+layout_mode = 0
+offset_right = 229.0
+offset_bottom = 31.0
+selected = 0
+item_count = 1
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+
+[node name="VolumeBar" type="ProgressBar" parent="." unique_id=1749677896]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 288.0
+offset_bottom = 288.0
+
+[node name="BoostSlider" type="HSlider" parent="." unique_id=1176147888]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 72.0
+offset_right = 288.0
+offset_bottom = 104.0
+max_value = 3.0
+step = 0.1
+value = 1.0
+
+[node name="ThresholdSlider" type="HSlider" parent="." unique_id=1912158281]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 128.0
+offset_right = 296.0
+offset_bottom = 160.0
+theme = SubResource("Theme_2nh25")
+max_value = 3.0
+step = 0.1
+value = 1.0
+
+[node name="Label" type="Label" parent="." unique_id=448501323]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 206.0
+offset_bottom = 161.0
+text = "Threshold
+"
+
+[node name="Label2" type="Label" parent="." unique_id=793276212]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 40.0
+offset_right = 295.0
+offset_bottom = 89.0
+text = "Boost volume if needed"
+
+[connection signal="item_selected" from="InputDeviceOptionButton" to="." method="_on_InputDeviceOptionButton_item_selected"]
+[connection signal="pressed" from="InputDeviceOptionButton" to="." method="_on_input_device_option_button_pressed"]
+[connection signal="value_changed" from="BoostSlider" to="." method="_on_boost_slider_value_changed"]
+[connection signal="value_changed" from="ThresholdSlider" to="." method="_on_threshold_slider_value_changed"]

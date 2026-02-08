@@ -10,3 +10,6 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
+
+func spawn_waves():
+	$WaveSpawner.spawn_waves()

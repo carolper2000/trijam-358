@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://dby2cl63jfg2i"]
 
 [ext_resource type="PackedScene" uid="uid://dtjr8fw65y5lt" path="res://Scenes/Player.tscn" id="1_hpc76"]
-[ext_resource type="PackedScene" path="res://terrain.tscn" id="1_tr2i4"]
-[ext_resource type="PackedScene" path="res://proie.tscn" id="2_nhkr4"]
+[ext_resource type="PackedScene" uid="uid://3du5cst1qvgj" path="res://Scenes/MicManager.tscn" id="1_qxria"]
+[ext_resource type="PackedScene" uid="uid://cf5m5utequhd1" path="res://terrain.tscn" id="1_tr2i4"]
+[ext_resource type="PackedScene" uid="uid://cwf7lslyx6mjg" path="res://proie.tscn" id="2_nhkr4"]
+[ext_resource type="Script" uid="uid://h3mc84p3yo28" path="res://Scripts/mic_manager.gd" id="2_y4jh7"]
 
 [node name="MainScene" type="Node2D" unique_id=1131370307]
+
+[node name="AudioManager" parent="." unique_id=999088071 instance=ExtResource("1_qxria")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 190.0
+offset_top = 55.0
+offset_right = 190.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_y4jh7")
 
 [node name="Terrain" parent="." unique_id=1986809985 instance=ExtResource("1_tr2i4")]
 
@@ -14,3 +27,5 @@ position = Vector2(352, 62)
 [node name="Player" parent="." unique_id=373409412 instance=ExtResource("1_hpc76")]
 position = Vector2(87.00001, 91.00001)
 scale = Vector2(0.2, 0.2)
+
+[connection signal="threeshold_reached" from="AudioManager" to="Player" method="spawn_waves"]
