@@ -1,13 +1,24 @@
 extends Area2D
 
 @export var speed: float = 750.0
+@export var ttl: float = 1 #seconds
 @onready var ray = $RayCast2D
+
+func _ready() -> void:
+	# Créer un timer dynamiquement
+	var timer = get_tree().create_timer(ttl)
+	# Connecter la fin du timer à la destruction de l'onde
+	timer.timeout.connect(queue_free)
 
 func _physics_process(delta: float) -> void:
 	# On avance vers "l'avant" de l'objet
 	position += transform.x * speed * delta
 
-func _on_body_entered(_body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
+	# If the waves touches the player, it disappears
+	if (body.name == "Player"):
+		queue_free()
+	
 	ray.force_raycast_update()
 	
 	if ray.is_colliding():
