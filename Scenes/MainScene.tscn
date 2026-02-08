@@ -1,22 +1,13 @@
 [gd_scene format=3 uid="uid://dby2cl63jfg2i"]
 
 [ext_resource type="PackedScene" uid="uid://dtjr8fw65y5lt" path="res://Scenes/Player.tscn" id="1_hpc76"]
-[ext_resource type="Texture2D" uid="uid://clunpgrbqsihn" path="res://icon.svg" id="2_tr2i4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpc76"]
-size = Vector2(32, 390.5)
+[ext_resource type="PackedScene" path="res://terrain.tscn" id="1_tr2i4"]
 
 [node name="MainScene" type="Node2D" unique_id=1131370307]
 
+[node name="Terrain" parent="." unique_id=1986809985 instance=ExtResource("1_tr2i4")]
+scale = Vector2(2.055, 2.055)
+
 [node name="Player" parent="." unique_id=373409412 instance=ExtResource("1_hpc76")]
-
-[node name="Obstacle" type="StaticBody2D" parent="." unique_id=1696566922]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle" unique_id=1438423274]
-position = Vector2(471, 214)
-shape = SubResource("RectangleShape2D_hpc76")
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacle/CollisionShape2D2" unique_id=239066822]
-position = Vector2(1.1920929e-05, -0.49999952)
-scale = Vector2(0.26562518, 3.0390625)
-texture = ExtResource("2_tr2i4")
+position = Vector2(207, 180)
+scale = Vector2(0.5, 0.5)

@@ -12,11 +12,13 @@ script = ExtResource("1_y54vu")
 target_position = Vector2(50, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1236550856]
+position = Vector2(5, 0)
 rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_rvxmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170517956]
+scale = Vector2(1, 1.5)
 shape = SubResource("CircleShape2D_k8ij1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
