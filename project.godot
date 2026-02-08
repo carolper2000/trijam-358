@@ -11,8 +11,19 @@ config_version=5
 [application]
 
 config/name="Trijam-358"
+run/main_scene="uid://cf5m5utequhd1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=400
+window/size/viewport_height=300
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fastnoiselite-configurator/plugin.cfg")
 
 [physics]
 
