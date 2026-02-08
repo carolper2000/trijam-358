@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dtjr8fw65y5lt" path="res://Scenes/Player.tscn" id="1_hpc76"]
 [ext_resource type="PackedScene" path="res://terrain.tscn" id="1_tr2i4"]
+[ext_resource type="PackedScene" path="res://proie.tscn" id="2_nhkr4"]
 
 [node name="MainScene" type="Node2D" unique_id=1131370307]
 
 [node name="Terrain" parent="." unique_id=1986809985 instance=ExtResource("1_tr2i4")]
-scale = Vector2(2.055, 2.055)
+
+[node name="Proie" parent="." unique_id=1271107330 instance=ExtResource("2_nhkr4")]
+position = Vector2(352, 62)
 
 [node name="Player" parent="." unique_id=373409412 instance=ExtResource("1_hpc76")]
-position = Vector2(207, 180)
-scale = Vector2(0.5, 0.5)
+position = Vector2(87.00001, 91.00001)
+scale = Vector2(0.2, 0.2)

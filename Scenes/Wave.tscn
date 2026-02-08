@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_k8ij1"]
 
 [node name="Wave" type="Area2D" unique_id=1913533414]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_y54vu")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=145871468]
