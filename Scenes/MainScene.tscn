@@ -12,7 +12,7 @@ size = Vector2(32, 390.5)
 [node name="Obstacle" type="StaticBody2D" parent="." unique_id=1696566922]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle" unique_id=1438423274]
-position = Vector2(479, 214)
+position = Vector2(471, 214)
 shape = SubResource("RectangleShape2D_hpc76")
 
 [node name="Sprite2D" type="Sprite2D" parent="Obstacle/CollisionShape2D2" unique_id=239066822]

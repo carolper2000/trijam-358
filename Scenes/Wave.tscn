@@ -7,7 +7,12 @@
 [node name="Wave" type="Area2D" unique_id=1913533414]
 script = ExtResource("1_y54vu")
 
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=145871468]
+target_position = Vector2(50, 0)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1236550856]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170517956]
 shape = SubResource("CircleShape2D_k8ij1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
