@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dby2cl63jfg2i"]
 
-[ext_resource type="Texture2D" uid="uid://clunpgrbqsihn" path="res://icon.svg" id="1_hpc76"]
-[ext_resource type="Script" uid="uid://bssenwqpyapwr" path="res://Scenes/player.gd" id="1_tr2i4"]
+[ext_resource type="PackedScene" uid="uid://dtjr8fw65y5lt" path="res://Scenes/Player.tscn" id="1_hpc76"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cihdc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpc76"]
+size = Vector2(32, 390.5)
 
 [node name="MainScene" type="Node2D" unique_id=1131370307]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=781012512]
-motion_mode = 1
-script = ExtResource("1_tr2i4")
+[node name="Player" parent="." unique_id=373409412 instance=ExtResource("1_hpc76")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1796635857]
-shape = SubResource("RectangleShape2D_cihdc")
+[node name="Obstacle" type="StaticBody2D" parent="." unique_id=1696566922]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1791225249]
-texture = ExtResource("1_hpc76")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle" unique_id=1438423274]
+position = Vector2(479, 214)
+shape = SubResource("RectangleShape2D_hpc76")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle/CollisionShape2D2" unique_id=239066822]

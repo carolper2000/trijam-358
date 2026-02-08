@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dtjr8fw65y5lt"]
+
+[ext_resource type="Script" uid="uid://bssenwqpyapwr" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://clunpgrbqsihn" path="res://icon.svg" id="2_gntrk"]
+[ext_resource type="Script" uid="uid://d3vs22y3sy86q" path="res://Scripts/sound_waves.gd" id="3_gntrk"]
+[ext_resource type="PackedScene" uid="uid://wrvh8lkcwtwd" path="res://Scenes/Wave.tscn" id="4_dewec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cihdc"]
+
+[node name="Player" type="CharacterBody2D" unique_id=373409412]
+motion_mode = 1
+script = ExtResource("1_kyqiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2114293067]
+shape = SubResource("RectangleShape2D_cihdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2036341827]
+texture = ExtResource("2_gntrk")
+
+[node name="SoundWaves" type="Node2D" parent="." unique_id=1496038066]
+position = Vector2(65, 0)
+script = ExtResource("3_gntrk")
+Wave = ExtResource("4_dewec")
+
+[node name="Sprite2D" type="Sprite2D" parent="SoundWaves" unique_id=1062614495]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_gntrk")
+
+[node name="RayCast2D" type="RayCast2D" parent="SoundWaves" unique_id=597739191]
+target_position = Vector2(250, 0)
+hit_from_inside = true
+
+[node name="Line2D" type="Line2D" parent="SoundWaves" unique_id=1342951359]
+
+[node name="Label" type="Label" parent="SoundWaves" unique_id=1362593999]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://wrvh8lkcwtwd"]
+
+[ext_resource type="Script" uid="uid://duyit7kc2sgw0" path="res://Scripts/wave.gd" id="1_y54vu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k8ij1"]
+
+[node name="Wave" type="Area2D" unique_id=1913533414]
+script = ExtResource("1_y54vu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1236550856]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170517956]
+shape = SubResource("CircleShape2D_k8ij1")
