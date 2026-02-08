@@ -5,7 +5,7 @@ const height = 300
 
 const noise_params = {
 	"noise_type": 2,
-	"frequency": 0.025000,
+	"frequency": 0.018,
 	"domain_warp_enabled": true,
 	"domain_warp_amplitude": 50.010000,
 	"domain_warp_fractal_gain": 0.500000,
