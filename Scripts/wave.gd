@@ -1,34 +1,3 @@
-#extends Area2D
-#
-#@export var speed: float = 750.0
-#@onready var ray = $RayCast2D
-#
-#func _physics_process(delta: float) -> void:
-	#position += transform.x * speed * delta
-#
-#func _on_body_entered(_body: Node2D) -> void:
-	## On allonge temporairement le rayon pour être sûr de toucher le mur
-	## même si l'onde est déjà un peu à l'intérieur
-	#ray.target_position = Vector2(100, 0) 
-	#ray.force_raycast_update()
-	#
-	#if ray.is_colliding():
-		#var normal = ray.get_collision_normal()
-		#
-		## 1. Calcul du rebond exact
-		#var current_dir = transform.x
-		#var new_dir = current_dir.reflect(normal)
-		#
-		## 2. Application
-		#rotation = new_dir.angle()
-		#
-		## 3. Sortie forcée de la zone de collision pour éviter les bugs
-		## On replace l'onde au point de contact + un petit décalage
-		#global_position = ray.get_collision_point() + (normal * 5.0)
-	#else:
-		## Si ça traverse encore, c'est que le RayCast ne voit pas le Layer de l'obstacle
-		#print("Erreur : Le RayCast ne voit pas l'obstacle sur le Layer ", _body.collision_layer)
-
 extends Area2D
 
 @export var speed: float = 750.0
