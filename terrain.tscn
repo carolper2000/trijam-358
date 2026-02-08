@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cf5m5utequhd1"]
+
+[ext_resource type="Script" uid="uid://nc7i51m3vy6f" path="res://terrain.gd" id="1_206su"]
+
+[node name="Terrain" type="Node2D" unique_id=1986809985]
+script = ExtResource("1_206su")
+
+[node name="Bord" type="StaticBody2D" parent="." unique_id=807287174]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bord" unique_id=1009458111]
+position = Vector2(49, 55)
+polygon = PackedVector2Array(-9, -84, -28, 51, 1, 9, 39, -23, 107, -46, 196, -47, 272, -32, 326, 1, 345, 54, 340, 121, 325, 181, 286, 222, 220, 233, 149, 238, 51, 225, -4, 202, -32, 137, -28, 70, -24, 21, -11, -74, -43, -85, -136, 200, 139, 322, 440, 232, 424, -66, 115, -138)
