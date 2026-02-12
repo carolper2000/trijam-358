@@ -71,7 +71,7 @@ func _ready() -> void:
 	
 	$BoostSlider.min_value = 0.1
 	$BoostSlider.max_value = 3.0
-	$BoostSlider.value = 1.0
+	$BoostSlider.value = 2.0
 	$BoostSlider.step = 0.1
 	boost_gain = 1.0
 

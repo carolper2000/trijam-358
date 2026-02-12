@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://3du5cst1qvgj"]
+[gd_scene load_steps=3 format=3 uid="uid://3du5cst1qvgj"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_abc12"]
 
 [sub_resource type="Theme" id="Theme_2nh25"]
 
-[node name="AudioManager" type="Control" unique_id=999088071]
+[node name="AudioManager" type="Control"]
 layout_mode = 3
 anchor_right = 0.201
-anchor_bottom = 0.049000002
+anchor_bottom = 0.049
 offset_right = -231.552
 offset_bottom = -31.752
 
-[node name="MicInput" type="AudioStreamPlayer" parent="." unique_id=1634959458]
+[node name="MicInput" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMicrophone_abc12")
 autoplay = true
 
-[node name="InputDeviceOptionButton" type="OptionButton" parent="." unique_id=749241249]
+[node name="InputDeviceOptionButton" type="OptionButton" parent="."]
 layout_mode = 0
 offset_right = 229.0
 offset_bottom = 31.0
@@ -24,14 +24,14 @@ item_count = 1
 popup/item_0/text = "Default"
 popup/item_0/id = 0
 
-[node name="VolumeBar" type="ProgressBar" parent="." unique_id=1749677896]
+[node name="VolumeBar" type="ProgressBar" parent="."]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 160.0
 offset_right = 288.0
 offset_bottom = 288.0
 
-[node name="BoostSlider" type="HSlider" parent="." unique_id=1176147888]
+[node name="BoostSlider" type="HSlider" parent="."]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 72.0
@@ -41,7 +41,7 @@ max_value = 3.0
 step = 0.1
 value = 1.0
 
-[node name="ThresholdSlider" type="HSlider" parent="." unique_id=1912158281]
+[node name="ThresholdSlider" type="HSlider" parent="."]
 layout_mode = 0
 offset_left = 136.0
 offset_top = 128.0
@@ -52,7 +52,7 @@ max_value = 3.0
 step = 0.1
 value = 1.0
 
-[node name="Label" type="Label" parent="." unique_id=448501323]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 112.0
@@ -61,7 +61,7 @@ offset_bottom = 161.0
 text = "Threshold
 "
 
-[node name="Label2" type="Label" parent="." unique_id=793276212]
+[node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 40.0

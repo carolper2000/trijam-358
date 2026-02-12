@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dtjr8fw65y5lt"]
+[gd_scene load_steps=6 format=3 uid="uid://dtjr8fw65y5lt"]
 
 [ext_resource type="Script" uid="uid://bssenwqpyapwr" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://clunpgrbqsihn" path="res://icon.svg" id="2_gntrk"]
@@ -7,21 +7,21 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cihdc"]
 
-[node name="Player" type="CharacterBody2D" unique_id=373409412]
+[node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_kyqiw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2114293067]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cihdc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2036341827]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_gntrk")
 
-[node name="WaveSpawner" type="Node2D" parent="." unique_id=1496038066]
+[node name="WaveSpawner" type="Node2D" parent="."]
 position = Vector2(65, 0)
 script = ExtResource("3_gntrk")
 Wave = ExtResource("4_dewec")
 
-[node name="Sprite2D" type="Sprite2D" parent="WaveSpawner" unique_id=1062614495]
+[node name="Sprite2D" type="Sprite2D" parent="WaveSpawner"]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_gntrk")
